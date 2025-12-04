@@ -1,0 +1,511 @@
+{
+  "id": "221:1088",
+  "name": "Vector 8354",
+  "removed": false,
+  "isAsset": false,
+  "detachedInfo": null,
+  "visible": true,
+  "locked": false,
+  "stuckNodes": [],
+  "attachedConnectors": [],
+  "componentPropertyReferences": null,
+  "variableConsumptionMap": {},
+  "boundVariables": {},
+  "resolvedVariableModes": {},
+  "inferredVariables": {
+    "paragraphSpacing": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "paragraphIndent": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "strokeWeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:52:493"
+      }
+    ],
+    "topLeftRadius": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:64ef7753f71b2a958b16aa3f06c370496316cc4c/7113:30"
+      }
+    ],
+    "topRightRadius": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:64ef7753f71b2a958b16aa3f06c370496316cc4c/7113:30"
+      }
+    ],
+    "bottomLeftRadius": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:64ef7753f71b2a958b16aa3f06c370496316cc4c/7113:30"
+      }
+    ],
+    "bottomRightRadius": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:64ef7753f71b2a958b16aa3f06c370496316cc4c/7113:30"
+      }
+    ],
+    "strokeTopWeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "strokeBottomWeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "strokeLeftWeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "strokeRightWeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "minWidth": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:f2c879b76ebecc7d4f400d9156630e03fad7e0fe/6744:177"
+      }
+    ],
+    "minHeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:f2c879b76ebecc7d4f400d9156630e03fad7e0fe/6744:177"
+      }
+    ],
+    "fontSize": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "letterSpacing": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "lineHeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ],
+    "xPosition": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e9ef0efd5c2e8062effb55f651cc7d0dae805059/3623:275"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:0c89c741d3426c111b8270d22bac76ef83186994/3472:1"
+      },
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:dad8f93b3409a445ded43bc6eadb512b948e0e5e/5089:96"
+      }
+    ]
+  },
+  "availableInferredVariables": {
+    "strokeWeight": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:52:493"
+      }
+    ]
+  },
+  "explicitVariableModes": {},
+  "opacity": 1,
+  "blendMode": "PASS_THROUGH",
+  "isMask": false,
+  "maskType": "ALPHA",
+  "effects": [],
+  "effectStyleId": "",
+  "fills": [
+    {
+      "type": "GRADIENT_LINEAR",
+      "visible": true,
+      "opacity": 0.4000000059604645,
+      "blendMode": "NORMAL",
+      "gradientStops": [
+        {
+          "color": {
+            "r": 0.4000000059604645,
+            "g": 0.800000011920929,
+            "b": 0.5411764979362488,
+            "a": 1
+          },
+          "position": 0,
+          "boundVariables": {}
+        },
+        {
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0
+          },
+          "position": 1,
+          "boundVariables": {}
+        }
+      ],
+      "gradientTransform": [
+        [
+          -0.020332178100943565,
+          1.020331621170044,
+          0.19529280066490173
+        ],
+        [
+          -1.0411134958267212,
+          -0.16028320789337158,
+          1.0655063390731812
+        ]
+      ]
+    }
+  ],
+  "fillStyleId": "",
+  "strokes": [],
+  "strokeStyleId": "",
+  "strokeWeight": 1,
+  "strokeAlign": "CENTER",
+  "strokeJoin": "MITER",
+  "dashPattern": [],
+  "strokeCap": "NONE",
+  "strokeMiterLimit": 4,
+  "fillGeometry": [
+    {
+      "windingRule": "NONZERO",
+      "data": "M296.927 67.7179 C246.796 32.1579 -14.6805 -33.2507 53.5046 20.2713 L0 1260.38 C266.463 1129.32 318.358 1074.84 346.155 960.137 C-146.219 626.089 771.017 297.737 296.927 67.7179 Z"
+    }
+  ],
+  "strokeGeometry": [],
+  "relativeTransform": [
+    [
+      -0.9607838988304138,
+      -0.26470258831977844,
+      1742.00390625
+    ],
+    [
+      -0.2772982120513916,
+      0.9643300771713257,
+      115.35521507263184
+    ]
+  ],
+  "absoluteTransform": [
+    [
+      -0.9607838988304138,
+      -0.26470258831977844,
+      13299.00390625
+    ],
+    [
+      -0.2772982120513916,
+      0.9643300771713257,
+      33474.3515625
+    ]
+  ],
+  "x": 1742.00390625,
+  "y": 115.35521507263184,
+  "width": 437.63616943359375,
+  "height": 1260.375,
+  "absoluteBoundingBox": {
+    "x": 12544.905596358843,
+    "y": 33352.995835187045,
+    "width": 754.0983098911565,
+    "height": 1336.773248327765
+  },
+  "targetAspectRatio": null,
+  "gridRowSpan": 1,
+  "gridColumnSpan": 1,
+  "gridRowAnchorIndex": -1,
+  "gridColumnAnchorIndex": -1,
+  "gridChildHorizontalAlign": "AUTO",
+  "gridChildVerticalAlign": "AUTO",
+  "absoluteRenderBounds": {
+    "x": 12712.0302734375,
+    "y": 33446.58203125,
+    "width": 284.9697265625,
+    "height": 1055.41796875
+  },
+  "rotation": 163.90098045560782,
+  "layoutAlign": "INHERIT",
+  "constrainProportions": false,
+  "layoutGrow": 0,
+  "layoutPositioning": "AUTO",
+  "minWidth": null,
+  "minHeight": null,
+  "maxWidth": null,
+  "maxHeight": null,
+  "layoutSizingHorizontal": "FIXED",
+  "layoutSizingVertical": "FIXED",
+  "exportSettings": [],
+  "constraints": {
+    "horizontal": "MIN",
+    "vertical": "MIN"
+  },
+  "cornerRadius": 0,
+  "cornerSmoothing": 0,
+  "vectorNetwork": {
+    "vertices": [
+      {
+        "x": 53.5046289253161,
+        "y": 20.271300854031672,
+        "strokeCap": "NONE",
+        "strokeJoin": "MITER",
+        "cornerRadius": 0,
+        "handleMirroring": "NONE"
+      },
+      {
+        "x": 296.92658935130373,
+        "y": 67.7178635285931,
+        "strokeCap": "NONE",
+        "strokeJoin": "MITER",
+        "cornerRadius": 0,
+        "handleMirroring": "NONE"
+      },
+      {
+        "x": 346.15458199860376,
+        "y": 960.1367440903549,
+        "strokeCap": "NONE",
+        "strokeJoin": "MITER",
+        "cornerRadius": 0,
+        "handleMirroring": "NONE"
+      },
+      {
+        "x": 0,
+        "y": 1260.375,
+        "strokeCap": "NONE",
+        "strokeJoin": "MITER",
+        "cornerRadius": 0,
+        "handleMirroring": "NONE"
+      }
+    ],
+    "segments": [
+      {
+        "start": 0,
+        "end": 1,
+        "tangentStart": {
+          "x": -68.18511712056741,
+          "y": -53.521954589083364
+        },
+        "tangentEnd": {
+          "x": -50.1304631372331,
+          "y": -35.55995431826524
+        }
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "tangentStart": {
+          "x": 474.0902402506709,
+          "y": 230.01877677858207
+        },
+        "tangentEnd": {
+          "x": -492.37315969166673,
+          "y": -334.0480220007142
+        }
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "tangentStart": {
+          "x": -27.796699724275214,
+          "y": 114.70416721926314
+        },
+        "tangentEnd": {
+          "x": 266.46268663767626,
+          "y": -131.05241848331886
+        }
+      },
+      {
+        "start": 3,
+        "end": 0,
+        "tangentStart": {
+          "x": 0,
+          "y": 0
+        },
+        "tangentEnd": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    ],
+    "regions": []
+  },
+  "vectorPaths": [
+    {
+      "windingRule": "NONE",
+      "data": "M 53.5046289253161 20.271300854031672 C -14.680488195251314 -33.25065373505169 246.79612621407063 32.15790921032786 296.92658935130373 67.7178635285931 C 771.0168296019747 297.73664030717515 -146.21857769306297 626.0887220896407 346.15458199860376 960.1367440903549 C 318.3578822743285 1074.8409113096181 266.46268663767626 1129.322581516681 0 1260.375 L 53.5046289253161 20.271300854031672 Z"
+    }
+  ],
+  "handleMirroring": "NONE",
+  "reactions": [],
+  "playbackSettings": {
+    "autoplay": true,
+    "loop": true,
+    "muted": false
+  },
+  "annotations": [],
+  "type": "VECTOR"
+}
