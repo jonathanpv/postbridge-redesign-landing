@@ -121,45 +121,115 @@ type AccordionItemProps = {
   onToggle: () => void
 }
 
+const itemVariants = {
+  closed: {
+    borderRadius: 12,
+    backgroundColor: "white",
+    boxShadow: "none",
+    borderWidth: 1,
+    borderColor: "#e2e2e2",
+    borderStyle: "solid",
+  },
+  open: {
+    borderRadius: 19,
+    backgroundColor: "#f8f8f8",
+    boxShadow: "0 4px 11px 0 rgba(0,0,0,0.09)",
+    borderWidth: 0,
+    borderColor: "transparent",
+    borderStyle: "solid",
+  },
+}
+
+const buttonVariants = {
+  closed: {
+    paddingTop: 14,
+    paddingBottom: 14,
+    paddingLeft: 16,
+    paddingRight: 16,
+  },
+  open: {
+    paddingTop: 21,
+    paddingBottom: 2,
+    paddingLeft: 21,
+    paddingRight: 21,
+  },
+}
+
+const titleVariants = {
+  closed: { color: "#333c4d" },
+  open: { color: "#66cc8a" },
+}
+
+const contentWrapperVariants = {
+  closed: { y: 0 },
+  open: { y: -7 },
+}
+
+const leftVariants = {
+  closed: { x: 0 },
+  open: { x: -5 },
+}
+
+const rightVariants = {
+  closed: { x: 0 },
+  open: { x: 5 },
+}
+
 function AccordionItem({ item, isOpen, onToggle }: AccordionItemProps) {
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden transition-all duration-300",
-        isOpen
-          ? "rounded-[19px] bg-[#f8f8f8] shadow-[0_4px_11px_0_rgba(0,0,0,0.09)]"
-          : "rounded-[12px] border border-[#e2e2e2] bg-white hover:border-[#d1d1d1]"
-      )}
+    <motion.div
+      layout
+      className="relative overflow-hidden"
+      variants={itemVariants}
+      animate={isOpen ? "open" : "closed"}
+      initial={false}
     >
       <motion.button
-        className={cn(
-          "flex w-full items-start justify-between text-left",
-          isOpen ? "p-[21px] pb-2" : "p-[14px] px-[16px]"
-        )}
+        className="flex w-full items-start justify-between text-left"
         onClick={onToggle}
+        variants={buttonVariants}
+        animate={isOpen ? "open" : "closed"}
+        initial={false}
         whileTap={{ scale: 0.995 }}
       >
-        <div className="flex items-center gap-4">
-          {/* Icon Container */}
-          <div className="flex h-[31px] w-[33px] shrink-0 items-center justify-center rounded-[6px] bg-white shadow-sm">
-            <Sparkles className="h-[18px] w-[18px] fill-[#66cc8a] text-[#66cc8a]" />
-          </div>
-
-          {/* Title */}
-          <h3
-            className={cn(
-              "font-sans text-[16px] font-semibold leading-[20px] transition-colors",
-              isOpen ? "text-[#66cc8a]" : "text-[#333c4d]"
-            )}
+        <motion.div
+          className="flex w-full items-start justify-between"
+          variants={contentWrapperVariants}
+          animate={isOpen ? "open" : "closed"}
+          initial={false}
+        >
+          <motion.div
+            className="flex items-center gap-4"
+            variants={leftVariants}
+            animate={isOpen ? "open" : "closed"}
+            initial={false}
           >
-            {item.title}
-          </h3>
-        </div>
+            {/* Icon Container */}
+            <div className="flex h-[31px] w-[33px] shrink-0 items-center justify-center rounded-[6px] bg-white shadow-sm">
+              <Sparkles className="h-[18px] w-[18px] fill-[#66cc8a] text-[#66cc8a]" />
+            </div>
 
-        {/* Toggle Icon (Plus/Minus) */}
-        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[#333c4d]/50 transition-transform duration-300">
-           {isOpen ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
-        </div>
+            {/* Title */}
+            <motion.h3
+              className="font-sans text-[16px] font-semibold leading-[20px]"
+              variants={titleVariants}
+              animate={isOpen ? "open" : "closed"}
+              initial={false}
+            >
+              {item.title}
+            </motion.h3>
+          </motion.div>
+
+          {/* Toggle Icon (Plus/Minus) */}
+          <motion.div
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[#333c4d]/50 transition-transform duration-300"
+            variants={rightVariants}
+            animate={isOpen ? "open" : "closed"}
+            initial={false}
+          >
+            {isOpen ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
+          </motion.div>
+        </motion.div>
       </motion.button>
 
       <AnimatePresence initial={false}>
@@ -182,6 +252,6 @@ function AccordionItem({ item, isOpen, onToggle }: AccordionItemProps) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }
