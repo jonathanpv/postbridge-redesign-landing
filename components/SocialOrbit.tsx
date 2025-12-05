@@ -42,12 +42,20 @@ function useMediaQuery(query: string) {
   return matches;
 }
 
+type OrbitConfig = {
+  radius: number;
+  iconSize: number;
+  speed: number;
+  reverse?: boolean;
+  icons: React.ReactElement<React.SVGProps<SVGSVGElement>>[];
+};
+
 export function SocialOrbit() {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   // 2. Configuration for the rings to keep JSX clean
   // logic: radius depends on mobile vs desktop state
-  const orbits = [
+  const orbits: OrbitConfig[] = [
     {
       radius: isMobile ? 80 : 180,
       iconSize: 30,
@@ -105,7 +113,7 @@ export function SocialOrbit() {
                     style={{ width: orbit.iconSize + 16, height: orbit.iconSize + 16 }}
                   >
                     {/* Cloning allows us to force standard sizing on the SVG icons */}
-                    {React.cloneElement(icon as React.ReactElement, { 
+                    {React.cloneElement(icon as React.ReactElement<React.SVGProps<SVGSVGElement>>, { 
                         className: `w-[${orbit.iconSize}px] h-[${orbit.iconSize}px]` 
                     })}
                   </div>

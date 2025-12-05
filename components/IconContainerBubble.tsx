@@ -1,10 +1,16 @@
 import React from 'react';
 
+interface IconContainerBubbleProps {
+  children: React.ReactNode;
+  size?: number;
+  className?: string;
+}
+
 export const IconContainerBubble = ({ 
   children, 
   size = 72,
   className = "" 
-}) => {
+}: IconContainerBubbleProps) => {
   const innerCircleRadius = (size * 28.4226) / 72;
   const strokeRadius = (size * 26.9226) / 72;
   const center = size / 2;

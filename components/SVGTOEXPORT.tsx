@@ -91,7 +91,7 @@
 <g filter="url(#filter12_f_221_1794)">
 <path d="M181 157.967C195.043 160.111 223.182 154.429 223.392 114.547V54.0814C223.392 44.7542 229.027 38 241.034 38H275" stroke="url(#paint6_linear_221_1794)" stroke-width="2"/>
 </g>
-<g style="mix-blend-mode:darken">
+<g style={{ mixBlendMode: 'darken' }}>
 <path d="M181 158.612C195.043 160.756 223.182 155.074 223.392 115.192V54.7259C223.392 45.3987 229.027 38.6445 241.034 38.6445H275" stroke="url(#paint7_linear_221_1794)"/>
 </g>
 <g filter="url(#filter13_f_221_1794)">

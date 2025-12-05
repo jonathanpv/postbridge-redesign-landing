@@ -3,7 +3,7 @@
 import { AsFeaturedOnSection } from "@/components/AsFeaturedOnSection";
 import { ContentManagementSectionVisual } from "@/components/ContentManagementSectionVisual";
 import { ContentStudioVisual } from "@/components/ContentStudioSection";
-import CrossPostingSection, { CrossPostingSectionVisual } from "@/components/CrossPostingSection";
+import { CrossPostingSectionVisual } from "@/components/CrossPostingSection";
 import CTASection from "@/components/CTASection";
 import { DeveloperApiCard } from "@/components/DeveloperApiCard";
 import FAQSection from "@/components/FAQSection";

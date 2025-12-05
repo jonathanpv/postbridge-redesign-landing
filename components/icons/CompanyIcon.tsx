@@ -1,3 +1,4 @@
+import { SVGProps } from "react";
 
 export const CompanyIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg
