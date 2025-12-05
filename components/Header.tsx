@@ -69,7 +69,7 @@ export const Header = () => {
       <header className="flex items-center justify-between w-full h-20 px-20 bg-white">
           <div className="flex items-center gap-4">
             <CompanyIcon className="w-8 h-8" />
-            <span className="text-xl font-semibold">post bridge</span>
+            <span className="text-xl font-semibold text-nowrap">post bridge</span>
           </div>
           <NavigationMenu>
             <NavigationMenuList>

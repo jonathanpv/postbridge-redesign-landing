@@ -57,6 +57,32 @@
   --color-brand-white: var(--brand-white);
   --color-brand-white-50: var(--brand-white-50);
 
+
+  --color-illustration-gray-text: hsl(0 1% 60%);
+  --color-illustration-gray-medium: hsl(0 0% 55%);
+  --color-illustration-gray-light: hsl(0 0% 88%);
+  --color-illustration-border-light: hsl(0 0% 85%);
+  --color-illustration-white-off: hsl(0 0% 96%);
+  
+  --color-illustration-slate-dark: hsl(260 5% 40%);
+  
+  --color-illustration-red-pure: hsl(29 26% 63%);
+  --color-illustration-brand-red: hsl(25 20% 50%);
+  
+  --color-illustration-moss-dark: hsl(150 10% 55%);
+  --color-illustration-moss-medium: hsl(150 8% 60%);
+  
+  --color-illustration-green-vibrant: hsl(145 22% 62%);
+  --color-illustration-green-medium: hsl(150 15% 65%);
+  --color-illustration-green-soft: hsl(150 10% 88%);
+  --color-illustration-green-lightest: hsl(156 2% 98%);
+
+  --color-illustration-yellow: hsl(95 15% 88%);
+  --color-illustration-orange: hsl(35 22% 72%);
+  --color-illustration-pink: hsl(340 22% 58%);
+  --color-illustration-blue: hsl(260 18% 55%);
+  --color-illustration-purple: hsl(290 28% 45%);
+
   @keyframes orbit {
   0% {
     transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
@@ -114,6 +140,32 @@
   --brand-950: oklch(0.45 0.13 156); /* #007D2C */
   --brand-white: oklch(1 0 0); /* #FFFFFF */
   --brand-white-50: oklch(1 0 0 / 0.5); /* rgba(255, 255, 255, 0.5) */
+
+  --illustration-gray-text: 0.60 0.01 0;      /* #918F8F */
+  --illustration-gray-medium: 0.55 0 0;       /* #727272 */
+  --illustration-gray-light: 0.88 0 0;        /* #D5D5D5 */
+  --illustration-border-light: 0.85 0 0;      /* #CECECE */
+  --illustration-white-off: 0.96 0 0;         /* #F3F3F3 */
+  
+  --illustration-slate-dark: 0.40 0.05 260;   /* #4A5160 */
+  
+  --illustration-red-pure: 0.63 0.26 29;      /* #FF0000 */
+  --illustration-brand-red: 0.50 0.20 25;     /* #CB1F27 */
+  
+  --illustration-moss-dark: 0.55 0.10 150;    /* #5E876C */
+  --illustration-moss-medium: 0.60 0.08 150;  /* #74927F */
+  
+  --illustration-green-vibrant: 0.62 0.22 145; /* #21AA51 */
+  --illustration-green-medium: 0.65 0.15 150;  /* #539F6E */
+  --illustration-green-soft: 0.88 0.10 150;    /* #A7E4BC */
+  --illustration-green-lightest: 0.98 0.02 156; /* #EFFFF5 */
+
+  /* Chart & Accent Gradients */
+  --illustration-yellow: 0.88 0.15 95;        /* #FFDD55 */
+  --illustration-orange: 0.72 0.22 35;        /* #FF543E */
+  --illustration-pink: 0.58 0.22 340;         /* #C837AB */
+  --illustration-blue: 0.55 0.18 260;         /* #3771C8 */
+  --illustration-purple: 0.45 0.28 290;       /* #6600FF */
 }
 
 .dark {

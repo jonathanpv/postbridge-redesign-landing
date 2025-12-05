@@ -1,5 +1,4 @@
 import React, { useId } from "react";
-import { ArrowRight, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
@@ -8,7 +7,7 @@ import { cn } from "@/lib/utils";
  * A precise SVG reconstruction of the Figma visual.
  * Uses a unique ID prefix to prevent DOM ID conflicts for gradients/filters.
  */
-const CrossPostingVisualization = ({ className }: { className?: string }) => {
+export const CrossPostingSectionVisual = ({ className }: { className?: string }) => {
   // Using a stable ID prefix for this instance to ensure SVG references work correctly
   // and don't clash if multiple instances exist on the page.
   const idPrefix = useId().replace(/:/g, ""); 
@@ -1029,60 +1028,3 @@ const CrossPostingVisualization = ({ className }: { className?: string }) => {
     </svg>
   );
 };
-
-export default function CrossPostingSection() {
-  return (
-    <section className="w-full flex justify-center p-4 md:p-8">
-      {/* Main Card */}
-      <div className="relative w-full max-w-[1068px] min-h-[428px] overflow-hidden rounded-[20px] bg-gradient-to-r from-brand-white to-[#E8FBF0] border border-[#F0F0F0] shadow-sm flex flex-col lg:flex-row">
-        
-        {/* Left Column: Content */}
-        <div className="flex-1 p-8 lg:p-[48px] flex flex-col justify-center items-start relative z-10">
-          
-          {/* Badge */}
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-[50px] h-[46px] rounded-xl bg-[#F8FFFA] flex items-center justify-center border border-[#E9F8ED] shadow-[0px_2px_4px_rgba(102,204,138,0.1),0px_7px_7px_rgba(102,204,138,0.09)]">
-              <Zap className="w-6 h-6 text-brand-700 fill-brand-700" />
-            </div>
-            <span className="text-brand-700 font-semibold tracking-wide text-[15px] uppercase">
-              Cross-posting
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h2 className="text-[32px] md:text-[37px] leading-[1.2] font-bold text-[#333c4d] tracking-tight mb-6">
-            Post to all platforms <br />
-            <span className="text-brand-700">instantly</span>
-          </h2>
-
-          {/* Description */}
-          <p className="text-[#333c4d] text-base leading-[1.8] text-justify md:text-left max-w-[480px] mb-8 opacity-90">
-            Publish everywhere in 30 seconds, not 30 minutes. Manage all your
-            personal and brand accounts without switching back and forth.
-            Connect your social media accounts and publish your content across
-            all platforms with a single click - no learning curve required.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
-            <button className="h-[46px] px-8 rounded-full bg-brand-700 text-brand-white font-medium text-[16px] border border-transparent flex justify-center items-center gap-2 hover:bg-brand-800 transition-all duration-300 relative overflow-hidden group shadow-md shadow-brand-700/20 active:scale-95">
-              <span>Start posting</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
-
-            <button className="h-[46px] px-8 rounded-full bg-brand-white text-[#4b5362] font-medium text-[16px] border border-[#bbbbbb] hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 shadow-sm active:scale-95">
-              View platforms
-            </button>
-          </div>
-        </div>
-
-        {/* Right Column: Visualization */}
-        <div className="flex-1 w-full lg:w-[562px] min-h-[300px] lg:h-auto relative flex justify-center items-center p-6 lg:p-0 lg:pr-[18px] lg:py-[18px]">
-          <div className="relative w-full max-w-[562px] bg-brand-white rounded-[14px] shadow-sm overflow-hidden border border-[#f0f0f0] flex items-center justify-center">
-            <CrossPostingVisualization />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}

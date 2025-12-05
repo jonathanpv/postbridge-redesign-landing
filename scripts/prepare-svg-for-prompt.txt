@@ -11,13 +11,13 @@
 # Input Requirements
 
 You'll receive:
-- Raw SVG markup (cleaned by user)
+- Raw SVG markup where path data has been replaced by placeholders (e.g., `d="{{SVG_WORKLOAD_PATH_ID_0}}"`)
 - Project's `globals.css` file with design token variables
 
 # Core Objectives
 
 **Transform SVG exports into clean, reusable components that:**
-- Preserve exact path data and shapes (1:1 copy)
+- Preserve exact path data and shapes by using the provided placeholders
 - Map colors to CSS variables from `globals.css`
 - Use proper component patterns with TypeScript
 - Are resizable via className through viewBox
@@ -50,11 +50,63 @@ You'll receive:
 // --accent: 142 76% 36%; /* #10B981 */
 ```
 
-**Path Data Integrity**
-- Copy path `d=""` attributes **exactly** as provided
-- Preserve all coordinates, curves, and shape data character-for-character
-- Do NOT simplify, optimize, or regenerate paths
-- This ensures 1:1 visual fidelity
+**Path Data Integrity & Placeholders**
+- To optimize processing, complex SVG path data has been extracted from the input.
+- You will find `d` attributes populated with placeholders like `{{SVG_WORKLOAD_PATH_ID_0}}`.
+- **Crucially, you must copy these placeholders exactly as they appear.**
+- Do NOT attempt to generate or modify path data.
+- The final output component must use these exact placeholders in the `d` attributes.
+
+**Example:**
+```tsx
+// Input SVG with placeholder
+<path d="{{SVG_WORKLOAD_PATH_ID_0}}" fill="#10B981" />
+
+// Expected component output
+<path d="{{SVG_WORKLOAD_PATH_ID_0}}" fill="hsl(var(--success))" />
+```
+
+### Processed SVG Input Example
+This is what the SVG input you receive will look like, with path data replaced.
+
+```xml
+<svg viewBox="0 0 10 10">
+  <path d="{{SVG_WORKLOAD_PATH_ID_0}}" fill="#ff0000"/>
+</svg>
+```
+
+### Processed React Output Example
+This is what your generated React component should look like, preserving the placeholder.
+
+```tsx
+import { cn } from '@/lib/utils'
+
+interface MyIconProps {
+  className?: string
+}
+
+export function MyIcon({ className }: MyIconProps) {
+  return (
+    <svg
+      viewBox="0 0 10 10"
+      width="100%"
+      height="100%"
+      className={cn("", className)}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="{{SVG_WORKLOAD_PATH_ID_0}}" fill="hsl(var(--destructive))" />
+    </svg>
+  )
+}
+```
+And the corresponding CSS variables:
+```css
+/* Add to globals.css */
+:root {
+  --destructive: 0 84.2% 60.2%; /* #ff0000 */
+}
+```
 
 **SVG ID Conflicts**
 React's `useId()` hook prevents ID collisions when components render multiple times.
@@ -65,11 +117,11 @@ import { useId } from 'react'
 
 function LogoIcon({ className }: { className?: string }) {
   const id = useId()
-  
+
   return (
-    <svg 
-      viewBox="0 0 100 100" 
-      width="100%" 
+    <svg
+      viewBox="0 0 100 100"
+      width="100%"
       height="100%"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +142,7 @@ function LogoIcon({ className }: { className?: string }) {
 - `<linearGradient id={...}>`
 - `<radialGradient id={...}>`
 - `<clipPath id={...}>`
-- `<mask id={...}>`
+- `<mask>`
 - `<filter id={...}>`
 - Any `<defs>` elements referenced by `url(#...)`
 
@@ -106,7 +158,7 @@ interface HeroIllustrationProps {
 
 export function HeroIllustration({ className }: HeroIllustrationProps) {
   const id = useId()
-  
+
   return (
     <svg
       viewBox="0 0 800 600"
@@ -123,16 +175,16 @@ export function HeroIllustration({ className }: HeroIllustrationProps) {
           <stop offset="100%" stopColor="hsl(var(--gradient-end))" />
         </linearGradient>
       </defs>
-      
-      {/* Exact path data from input */}
-      <path 
-        d="M150.5 200.3C150.5 180.2..." 
+
+      {/* Exact path data placeholder from input */}
+      <path
+        d="{{SVG_WORKLOAD_PATH_ID_0}}"
         fill={`url(#hero-gradient-${id})`}
       />
-      <circle 
-        cx="400" 
-        cy="300" 
-        r="50" 
+      <circle
+        cx="400"
+        cy="300"
+        r="50"
         fill="hsl(var(--accent))"
       />
     </svg>
@@ -164,7 +216,7 @@ Sometimes CSS variables aren't practical:
 
 **Single `.tsx` file containing:**
 1. Component with `useId()` for ID safety
-2. All path data **copied exactly** from input
+2. All path data placeholders **copied exactly** from input
 3. Colors mapped to CSS variables (existing or new)
 4. Proper TypeScript interfaces
 5. `viewBox` + `width/height="100%"` for resizing
@@ -192,7 +244,7 @@ Sometimes CSS variables aren't practical:
     </linearGradient>
   </defs>
   <circle cx="100" cy="100" r="80" fill="url(#gradient1)" />
-  <path d="M100 20 L180 180 L20 180 Z" fill="#10B981" />
+  <path d="{{SVG_WORKLOAD_PATH_ID_0}}" fill="#10B981" />
 </svg>
 ```
 
@@ -207,7 +259,7 @@ interface GeometricShapeProps {
 
 export function GeometricShape({ className }: GeometricShapeProps) {
   const id = useId()
-  
+
   return (
     <svg
       viewBox="0 0 200 200"
@@ -223,14 +275,14 @@ export function GeometricShape({ className }: GeometricShapeProps) {
           <stop offset="100%" stopColor="hsl(var(--accent-purple))" />
         </linearGradient>
       </defs>
-      <circle 
-        cx="100" 
-        cy="100" 
-        r="80" 
+      <circle
+        cx="100"
+        cy="100"
+        r="80"
         fill={`url(#shape-gradient-${id})`}
       />
-      <path 
-        d="M100 20 L180 180 L20 180 Z" 
+      <path
+        d="{{SVG_WORKLOAD_PATH_ID_0}}"
         fill="hsl(var(--success))"
       />
     </svg>
@@ -250,7 +302,7 @@ export function GeometricShape({ className }: GeometricShapeProps) {
 # Rules Summary
 
 ✅ **Do:**
-- Copy path data exactly (1:1 preservation)
+- Copy path data placeholders (e.g., `{{SVG_WORKLOAD_PATH_ID_0}}`) exactly
 - Use `useId()` for all `id` attributes in `<defs>`
 - Map colors to CSS variables when reasonable
 - Generate semantic, reusable variable names
@@ -259,39 +311,39 @@ export function GeometricShape({ className }: GeometricShapeProps) {
 - Use TypeScript and proper interfaces
 
 ❌ **Don't:**
-- Modify or simplify path coordinates
+- Modify or simplify path data placeholders
 - Hardcode IDs without `useId()`
 - Force CSS variables for every single color (pragmatism over dogma)
 - Add animations or interactions
 - Omit the new CSS variables block
 
 **Goal:** Production-ready React components that match the design exactly, integrate cleanly with the design system, and never cause ID conflicts.
- * 
- * 
+ *
+ *
  */
 
 
 
  Notice that we pass in the svg strings which will run expensive on a transformer model...
 
- So to prevent that lets make the paths be like 
+ So to prevent that lets make the paths be like
 
  d={{SVG_WORKLOAD_PATH_ID_HERE}}
 
- which we can regex and find and replace on both ENDS, so that the model can just read the svg code with those ids, and output those IDs when generating the react code 
- 
+ which we can regex and find and replace on both ENDS, so that the model can just read the svg code with those ids, and output those IDs when generating the react code
+
 
 make test cases for this (DO NOT delete the test cases, i will be verifying them)
 lets start with base cases 4 base cases that are easy
 
 ill then be adding harder ones
 
-for the test cases lets just do 
+for the test cases lets just do
 
 
 SVG -> placeholder id format
 
-placeholder id format -> valid svg back 
+placeholder id format -> valid svg back
 
-react code with placeholder id format (i know it wont be valid react syntax) -> valid react out out with the paths filled in 
+react code with placeholder id format (i know it wont be valid react syntax) -> valid react out out with the paths filled in
 
