@@ -1,4 +1,4 @@
-<svg width="562" height="392" viewBox="0 0 562 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 562 392" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
 <rect width="562" height="392" rx="14" fill="white"/>
 <circle cx="281.71" cy="230.513" r="39.9344" stroke="url(#paint0_linear_221_1594)" stroke-width="5"/>
 <circle cx="282.011" cy="233.822" r="49.4583" stroke="url(#paint1_linear_221_1594)"/>

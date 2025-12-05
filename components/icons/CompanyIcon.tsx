@@ -5,6 +5,8 @@ export const CompanyIcon = (props: SVGProps<SVGSVGElement>) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-8 -4 98 98"
       fill="none"
+      width="100%"
+      height="100%"
       {...props}
     >
       <g fill="#000" filter="url(#a)">

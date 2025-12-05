@@ -117,7 +117,7 @@ function FeatureRow({
   return (
     <div
       className={cn(
-        "group relative flex w-full max-w-[1068px] flex-col overflow-hidden rounded-[20px] lg:h-[428px] lg:flex-row lg:items-center",
+        "group relative flex w-full lg:max-w-[1068px] max-w-[600px] flex-col overflow-hidden rounded-[20px] lg:h-[428px] lg:flex-row lg:items-center",
         gradientClass,
         reversed ? "lg:flex-row-reverse" : ""
       )}
@@ -162,16 +162,16 @@ function FeatureRow({
       {/* Visual Side */}
       <div className={cn(
         "relative flex items-center justify-center p-4 lg:p-0",
-        "lg:absolute lg:top-[18px]",
+        "lg:absolute lg:top-[48px] xl:top-[18px]",
         reversed ? "lg:left-[18px]" : "lg:right-[18px]"
       )}>
-        <div className="h-[392px] w-[531px] overflow-hidden rounded-[14px] bg-white shadow-sm">
+        <div className="w-[531px] h-[392px] overflow-hidden rounded-[14px] bg-white shadow-sm lg:w-[450px] lg:h-[332px] xl:w-[531px] xl:h-[392px]">
           {visual}
         </div>
       </div>
       
       {/* Spacer for Flexbox layout on desktop to push content to correct side */}
-      <div className="hidden lg:block lg:w-[531px] lg:shrink-0" />
+      <div className="hidden lg:block lg:w-[450px] xl:w-[531px] lg:shrink-0" />
     </div>
   );
 }
@@ -182,7 +182,7 @@ function FeatureRow({
 
 export default function FeaturesSection() {
   return (
-    <section className="mx-auto w-full max-w-[1440px] border-x border-[#ebebeb] bg-white px-4 py-20 md:px-12 lg:px-[184px]">
+    <section className="mx-auto w-full max-w-[1440px] border-x border-[#ebebeb] bg-white px-4 py-20 md:px-12 lg:px-24 xl:px-40 2xl:px-[184px]">
       {/* Header Badge */}
       <div className="flex justify-center mb-[80px]">
         <SectionBadge>Features</SectionBadge>

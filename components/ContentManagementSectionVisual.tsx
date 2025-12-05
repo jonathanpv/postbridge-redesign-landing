@@ -2,7 +2,7 @@ import * as React from "react"
 import { SVGProps } from "react"
 
 export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="100%" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="100%" viewBox="0 0 562 392" {...props}>
     <g clipPath="url(#a)">
       <rect width={562} height={392} fill="#fff" rx={14} />
       <g filter="url(#b)">
