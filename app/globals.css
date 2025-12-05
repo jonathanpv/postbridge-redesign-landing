@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-d-bg: hsl(var(--d-bg));
+  --color-d-fg: hsl(var(--d-fg));
+  --color-d-border: hsl(var(--d-border));
+  --color-d-sheet: hsl(var(--d-sheet));
+  --color-d-muted: hsl(var(--d-muted));
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--Plus_Jakarta_Sans);
@@ -94,6 +99,11 @@
 }
 
 :root {
+  --d-bg: 0 0% 100%;
+  --d-muted: 0 0% 90%;
+  --d-fg: 0 0% 0%;
+  --d-border: 0 0% 90%;
+  --d-sheet: 0 0% 98%;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

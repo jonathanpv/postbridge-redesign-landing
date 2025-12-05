@@ -132,31 +132,38 @@ function FounderSection({ className, ...props }: React.ComponentProps<"section">
         </div>
 
         {/* Right Column: Profile Image & CTA */}
-        <div className="flex flex-col items-center gap-8 lg:col-span-5 lg:items-start lg:pt-16 xl:col-span-4 xl:pl-12">
-          {/* Profile Image */}
-          <div className="relative aspect-square w-64 md:w-80 lg:w-full max-w-sm">
-             {/* TODO: Replace src with actual profile image */}
-            <Image
-              src="/placeholder-founder.jpg" 
-              alt="Jack - Founder of Post Bridge"
-              fill
-              className="rounded-full object-cover shadow-xl ring-4 ring-background"
-            />
-          </div>
+       {/* Right Column: Profile Image & CTA */}
+{/* ADDED: lg:col-span-5 xl:col-span-4 so this container takes up the remaining space */}
+<div className="flex  flex-col items-center gap-8 lg:col-span-5 xl:col-span-4">
+  
+  {/* Profile Image */}
+  <Image
+    src="/jack-pfp.png" 
+    alt="Jack - Founder of Post Bridge"
+    // CHANGE 1: Increase these. This doesn't set the size on screen, 
+    // it just ensures the image quality is high enough when stretched.
+    width={800}
+    height={800}
+    // CHANGE 2: 
+    // - Removed 'w-64 md:w-80' (fixed widths)
+    // - Added 'w-full' (fill container width)
+    // - Added 'h-auto' (scale height automatically to keep aspect ratio)
+    className="w-full h-auto rounded-full object-cover shadow-xl ring-12 ring-brand-400 aspect-square max-w-sm lg:max-w-md"
+  />
 
-          {/* CTA Button */}
-          <button
-            className={cn(
-              "group relative flex items-center gap-3 rounded-full bg-brand-700 py-3 pl-8 pr-4 transition-all hover:bg-brand-800 hover:shadow-lg",
-              "text-base font-medium text-white shadow-md active:scale-95"
-            )}
-          >
-            <span>Try it for free</span>
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-1">
-              <ArrowRight className="h-4 w-4 text-white" />
-            </div>
-          </button>
-        </div>
+  {/* CTA Button */}
+  <button
+    className={cn(
+      "group relative flex items-center gap-3 rounded-full bg-brand-700 py-3 pl-8 pr-4 transition-all hover:bg-brand-800 hover:shadow-lg",
+      "text-base font-medium text-white shadow-md active:scale-95"
+    )}
+  >
+    <span>Try it for free</span>
+    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-1">
+      <ArrowRight className="h-4 w-4 text-white" />
+    </div>
+  </button>
+</div>
       </div>
     </section>
   );
