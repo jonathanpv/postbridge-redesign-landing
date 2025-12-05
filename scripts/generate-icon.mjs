@@ -30,7 +30,7 @@ async function generateComponent(figmaObjectPath, componentName) {
     let allPathElements = '';
 
     const processVector = (vectorObject) => {
-        const { name, fillGeometry, fills } = vectorObject;
+        const { name, fillGeometry, fills, relativeTransform } = vectorObject;
         if (!fillGeometry || fillGeometry.length === 0) return;
 
         const pathData = fillGeometry[0].data;
@@ -63,25 +63,39 @@ async function generateComponent(figmaObjectPath, componentName) {
             }
         }
         allDefsContent += defsForThisVector;
-        allPathElements += `
+
+        let pathElement = `
       <path
         d="${pathData}"
         ${fillContent}
       />
         `;
+
+        if (relativeTransform) {
+            const t = relativeTransform;
+            const matrix = `matrix(${t[0][0]}, ${t[1][0]}, ${t[0][1]}, ${t[1][1]}, ${t[0][2]}, ${t[1][2]})`;
+            pathElement = `
+        <g transform="${matrix}">
+          ${pathElement}
+        </g>
+            `;
+        }
+
+        allPathElements += pathElement;
     };
 
     if (figmaObject.type === 'VECTOR') {
       processVector(figmaObject);
     } else if (figmaObject.type === 'FRAME' && figmaObject.children) {
       figmaObject.children.forEach(child => {
+        // You might want to recursively process children if they can be nested frames.
+        // For now, we are only processing direct VECTOR children.
         if (child.type === 'VECTOR') {
           processVector(child);
         }
       });
     }
-
-
+    
     const componentString = `
 import React from 'react';
 
@@ -104,6 +118,7 @@ const ${componentName}: React.FC<IconProps> = (props) => {
     </svg>
   );
 };
+
 
 export default ${componentName};
 `;
