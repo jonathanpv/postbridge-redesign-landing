@@ -105,20 +105,21 @@ function FeatureRow({
   icon,
   visual,
 }: FeatureRowProps) {
-  
+
   // Logic to determine gradient direction based on layout.
-  // We want the green tint (rgba 102,204,138) to sit behind the visual, 
+  // We want the green tint (rgba 102,204,138) to sit behind the visual,
   // and fade to transparent behind the text.
   // 15% opacity (0.15) is used to ensure text remains readable.
-  const gradientClass = reversed
-    ? "bg-[linear-gradient(270deg,rgba(255,255,255,0)_0%,rgba(102,204,138,0.15)_100%)]" // Green on Left (Visual side)
-    : "bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(102,204,138,0.15)_100%)]"; // Green on Right (Visual side)
+  // Using inline styles for better iOS Safari compatibility
+  const gradientStyle = reversed
+    ? { background: "linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(102,204,138,0.15) 100%)" } // Green on Left (Visual side)
+    : { background: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(102,204,138,0.15) 100%)" }; // Green on Right (Visual side)
 
   return (
     <div
+      style={gradientStyle}
       className={cn(
         "group relative flex w-full lg:max-w-[1068px] max-w-[600px] flex-col overflow-hidden rounded-[20px] lg:h-[428px] lg:flex-row lg:items-center",
-        gradientClass,
         reversed ? "lg:flex-row-reverse" : ""
       )}
     >
