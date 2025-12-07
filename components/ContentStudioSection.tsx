@@ -1,17 +1,22 @@
 import * as React from "react"
 import { SVGProps } from "react"
-export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
+
+export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => {
+  const baseId = React.useId();
+  const uid = (id: string) => `${baseId}-${id}`;
+
+  return(
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 531 392" {...props}>
-    <g clipPath="url(#a)">
+    <g clipPath="url(#{uid('a')})">
       <rect width={531} height={392} fill="#fff" rx={14} />
-      <g filter="url(#b)">
-        <rect width={160} height={333} x={26} y={24} fill="url(#c)" rx={18} />
+      <g filter="url(#{uid('b')})">
+        <rect width={160} height={333} x={26} y={24} fill="url(#{uid('c')})" rx={18} />
         <rect
           width={159}
           height={332}
           x={26.5}
           y={24.5}
-          stroke="url(#d)"
+          stroke="url(#{uid('d')})"
           rx={17.5}
         />
         <rect width={130} height={10} x={41} y={49} fill="#CDF8DC" rx={5} />
@@ -30,14 +35,14 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <rect width={106} height={7} x={58} y={272} fill="#CDF8DC" rx={3.5} />
         <rect width={106} height={7} x={58} y={292} fill="#CDF8DC" rx={3.5} />
       </g>
-      <g filter="url(#e)">
-        <rect width={108} height={32} x={57} y={164} fill="url(#f)" rx={9} />
+      <g filter="url(#{uid('e')})">
+        <rect width={108} height={32} x={57} y={164} fill="url(#{uid('f')})" rx={9} />
         <rect
           width={107}
           height={31}
           x={57.5}
           y={164.5}
-          stroke="url(#g)"
+          stroke="url(#{uid('g')})"
           strokeOpacity={0.36}
           rx={8.5}
         />
@@ -61,17 +66,17 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </g>
       <path
-        fill="url(#h)"
+        fill="url(#{uid('h')})"
         d="M137.752 192.309a1.442 1.442 0 0 1 .795-1.286 1.432 1.432 0 0 1 1.505.136l11.498 8.627c1.104.828.517 2.588-.863 2.588h-5.674a1.43 1.43 0 0 0-1.14.561l-3.545 4.621c-.835 1.09-2.577.499-2.577-.875l.001-14.372Z"
       />
-      <g filter="url(#i)">
-        <rect width={322} height={181} x={202} y={24} fill="url(#j)" rx={18} />
+      <g filter="url(#{uid('i')})">
+        <rect width={322} height={181} x={202} y={24} fill="url(#{uid('j')})" rx={18} />
         <rect
           width={321}
           height={180}
           x={202.5}
           y={24.5}
-          stroke="url(#k)"
+          stroke="url(#{uid('k')})"
           strokeOpacity={0.47}
           rx={17.5}
         />
@@ -79,7 +84,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <rect width={291} height={6} x={217} y={117} fill="#CDF8DC" rx={3} />
         <rect width={161} height={6} x={217} y={127} fill="#CDF8DC" rx={3} />
         <rect width={34} height={10} x={474} y={96} fill="#CDF8DC" rx={5} />
-        <g filter="url(#l)">
+        <g filter="url(#{uid('l')})">
           <rect
             width={112}
             height={32}
@@ -94,7 +99,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
           />
         </g>
         <path
-          fill="url(#m)"
+          fill="url(#{uid('m')})"
           d="M290.752 186.309a1.442 1.442 0 0 1 .795-1.286 1.432 1.432 0 0 1 1.505.136l11.498 8.627c1.104.828.517 2.588-.863 2.588h-5.674a1.43 1.43 0 0 0-1.14.561l-3.545 4.621c-.835 1.09-2.577.499-2.577-.875l.001-14.372Z"
         />
         <path
@@ -121,7 +126,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         height={140}
         x={202.5}
         y={216.5}
-        fill="url(#n)"
+        fill="url(#{uid('n')})"
         rx={17.5}
       />
       <rect
@@ -129,11 +134,11 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         height={140}
         x={202.5}
         y={216.5}
-        stroke="url(#o)"
+        stroke="url(#{uid('o')})"
         strokeDasharray="6 6"
         rx={17.5}
       />
-      <g filter="url(#p)">
+      <g filter="url(#{uid('p')})">
         <rect width={129} height={117} x={210} y={226} fill="#fff" rx={12} />
         <path
           fill="#696969"
@@ -158,7 +163,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
           d="m265.99 255.002 2.75-3.2a2.196 2.196 0 0 1 2.77-.27 2.202 2.202 0 0 0 2.77-.27l2.33-2.33a4.002 4.002 0 0 1 5.16-.43l2.49 1.93m-13.27-2.26c.218 0 .434-.043.635-.127a1.672 1.672 0 0 0 .899-.898 1.669 1.669 0 0 0 0-1.271 1.672 1.672 0 0 0-.899-.898 1.659 1.659 0 1 0-.635 3.194Z"
         />
       </g>
-      <g filter="url(#q)">
+      <g filter="url(#{uid('q')})">
         <rect width={128} height={117} x={387} y={226} fill="#fff" rx={12} />
         <path
           fill="#696969"
@@ -185,13 +190,13 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </g>
       <path
-        fill="url(#r)"
+        fill="url(#{uid('r')})"
         d="M363 269.5a17.496 17.496 0 0 0-16.168 10.803 17.498 17.498 0 0 0 12.754 23.861 17.506 17.506 0 0 0 17.965-7.442 17.496 17.496 0 0 0-2.177-22.096A17.51 17.51 0 0 0 363 269.5Zm-3.5 25.375v-15.75L370 287l-10.5 7.875Z"
       />
     </g>
     <defs>
       <linearGradient
-        id="c"
+        id={uid('c')}
         x1={106}
         x2={106}
         y1={24}
@@ -202,7 +207,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="d"
+        id={uid('d')}
         x1={106}
         x2={106}
         y1={24}
@@ -213,7 +218,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#66CC8A" />
       </linearGradient>
       <linearGradient
-        id="f"
+        id={uid('f')}
         x1={111}
         x2={111}
         y1={164}
@@ -224,7 +229,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="g"
+        id={uid('g')}
         x1={111}
         x2={111}
         y1={164}
@@ -235,7 +240,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#66CC8A" />
       </linearGradient>
       <linearGradient
-        id="h"
+        id={uid('h')}
         x1={144.939}
         x2={144.939}
         y1={190.871}
@@ -246,7 +251,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#21AA51" />
       </linearGradient>
       <linearGradient
-        id="j"
+        id={uid('j')}
         x1={363}
         x2={363}
         y1={8.5}
@@ -257,7 +262,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="k"
+        id={uid('k')}
         x1={403}
         x2={401}
         y1={306.5}
@@ -268,7 +273,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#66CC8A" stopOpacity={0.67} />
       </linearGradient>
       <linearGradient
-        id="m"
+        id={uid('m')}
         x1={297.939}
         x2={297.939}
         y1={184.871}
@@ -279,7 +284,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#21AA51" />
       </linearGradient>
       <linearGradient
-        id="n"
+        id={uid('n')}
         x1={363}
         x2={363}
         y1={203.925}
@@ -290,7 +295,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="o"
+        id={uid('o')}
         x1={403}
         x2={401.786}
         y1={436.069}
@@ -301,7 +306,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#66CC8A" stopOpacity={0.67} />
       </linearGradient>
       <linearGradient
-        id="r"
+        id={uid('r')}
         x1={363}
         x2={363}
         y1={269.5}
@@ -312,7 +317,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#05AD40" />
       </linearGradient>
       <filter
-        id="b"
+        id={uid('b')}
         width={208}
         height={422}
         x={2}
@@ -376,7 +381,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="e"
+        id={uid('e')}
         width={138}
         height={88}
         x={42}
@@ -440,7 +445,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="i"
+        id={uid('i')}
         width={370}
         height={270}
         x={178}
@@ -504,7 +509,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="l"
+        id={uid('l')}
         width={112}
         height={40}
         x={214}
@@ -539,7 +544,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="p"
+        id={uid('p')}
         width={135}
         height={130}
         x={207}
@@ -615,7 +620,7 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
         />
       </filter>
       <filter
-        id="q"
+        id={uid('q')}
         width={134}
         height={130}
         x={384}
@@ -690,9 +695,10 @@ export const ContentStudioVisual = (props: SVGProps<SVGSVGElement>) => (
           result="shape"
         />
       </filter>
-      <clipPath id="a">
+      <clipPath id={uid('a')}>
         <rect width={531} height={392} fill="#fff" rx={14} />
       </clipPath>
     </defs>
   </svg>
-)
+  );
+}
