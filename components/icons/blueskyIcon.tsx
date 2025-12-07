@@ -1,7 +1,9 @@
 import * as React from "react"
-import { SVGProps } from "react"
+import { SVGProps, useId } from "react"
 
-export const BlueSkyIcon = (props: SVGProps<SVGSVGElement>) => (
+export const BlueSkyIcon = (props: SVGProps<SVGSVGElement>) => {
+  const id = useId()
+  return (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 28 25"
@@ -10,16 +12,17 @@ export const BlueSkyIcon = (props: SVGProps<SVGSVGElement>) => (
     fill="none"
     {...props}
   >
-    <g clipPath="url(#a)">
+    <g clipPath={`url(#${id}-a)`}>
       <path
         fill="#1185FE"
         d="M6.07 1.678C9.28 4.116 12.731 9.058 14 11.71c1.268-2.652 4.72-7.594 7.93-10.032C24.248-.08 28-1.442 28 2.89c0 .865-.49 7.265-.778 8.304-1 3.612-4.641 4.534-7.881 3.976 5.663.975 7.104 4.203 3.992 7.432-5.908 6.132-8.492-1.538-9.154-3.504-.121-.36-.178-.529-.179-.386 0-.143-.058.026-.179.386-.662 1.965-3.246 9.636-9.154 3.504-3.111-3.229-1.67-6.457 3.992-7.432-3.24.557-6.882-.364-7.881-3.976C.49 10.153 0 3.753 0 2.889c0-4.33 3.753-2.97 6.07-1.21Z"
       />
     </g>
     <defs>
-      <clipPath id="a">
+      <clipPath id={`${id}-a`}>
         <path fill="#fff" d="M0 0h28v25H0z" />
       </clipPath>
     </defs>
   </svg>
-)
+  )
+}

@@ -6,7 +6,7 @@ const OurImpactComponent = (props: React.HTMLAttributes<HTMLDivElement>) => {
     const globalDefs = (
         <svg height="0" width="0" style={{ position: 'absolute' }}>
             <defs>
-                <linearGradient id="gradient_stroke_1" gradientTransform="rotate(90)"><stop offset="0%" stop-color="rgba(131, 239, 169, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient><linearGradient id="gradient_stroke_2" gradientTransform="rotate(90)"><stop offset="0%" stop-color="rgba(131, 239, 169, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient><linearGradient id="gradient_stroke_3" gradientTransform="rotate(90)"><stop offset="0%" stop-color="rgba(131, 239, 169, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient>
+                <linearGradient id={`${id}-gradient_stroke_1`} gradientTransform="rotate(90)"><stop offset="0%" stop-color="rgba(131, 239, 169, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient><linearGradient id={`${id}-gradient_stroke_2`} gradientTransform="rotate(90)"><stop offset="0%" stop-color="rgba(131, 239, 169, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient><linearGradient id={`${id}-gradient_stroke_3`} gradientTransform="rotate(90)"><stop offset="0%" stop-color="rgba(131, 239, 169, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient>
             </defs>
         </svg>
     );
@@ -105,8 +105,8 @@ const OurImpactComponent = (props: React.HTMLAttributes<HTMLDivElement>) => {
         viewBox="0 0 1369 873"
         style={{ position: 'absolute', top: 0, left: 0 }}
     >
-        <defs><linearGradient id="grad_stroke_0" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgba(117, 210, 149, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient></defs>
-        <path d="" fill="none" stroke="url(#grad_stroke_0)" stroke-width="1" />
+        <defs><linearGradient id={`${id}-grad_stroke_0`} x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgba(117, 210, 149, 1)" /><stop offset="100%" stop-color="rgba(255, 255, 255, 0)" /></linearGradient></defs>
+        <path d="" fill="none" stroke={`url(#${id}-grad_stroke_0)`} stroke-width="1" />
     </svg></div><div style={{
   'position': 'absolute',
   'left': '553px',

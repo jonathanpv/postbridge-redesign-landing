@@ -1,6 +1,8 @@
 import * as React from "react"
-import { SVGProps } from "react"
-export const InstagramColor = (props: SVGProps<SVGSVGElement>) => (
+import { SVGProps, useId } from "react"
+export const InstagramColor = (props: SVGProps<SVGSVGElement>) => {
+  const id = useId()
+  return (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 29 29"
@@ -9,13 +11,13 @@ export const InstagramColor = (props: SVGProps<SVGSVGElement>) => (
     fill="none"
     {...props}
   >
-    <g clipPath="url(#a)">
+    <g clipPath={`url(#${id}-a)`}>
       <path
-        fill="url(#b)"
+        fill={`url(#${id}-b)`}
         d="M22.203 0H6.797A6.797 6.797 0 0 0 0 6.797v15.406A6.797 6.797 0 0 0 6.797 29h15.406A6.797 6.797 0 0 0 29 22.203V6.797A6.797 6.797 0 0 0 22.203 0Z"
       />
       <path
-        fill="url(#c)"
+        fill={`url(#${id}-c)`}
         d="M22.203 0H6.797A6.797 6.797 0 0 0 0 6.797v15.406A6.797 6.797 0 0 0 6.797 29h15.406A6.797 6.797 0 0 0 29 22.203V6.797A6.797 6.797 0 0 0 22.203 0Z"
       />
       <path
@@ -25,7 +27,7 @@ export const InstagramColor = (props: SVGProps<SVGSVGElement>) => (
     </g>
     <defs>
       <radialGradient
-        id="b"
+        id={`${id}-b`}
         cx={0}
         cy={0}
         r={1}
@@ -38,7 +40,7 @@ export const InstagramColor = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#C837AB" />
       </radialGradient>
       <radialGradient
-        id="c"
+        id={`${id}-c`}
         cx={0}
         cy={0}
         r={1}
@@ -49,7 +51,7 @@ export const InstagramColor = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={0.128} stopColor="#3771C8" />
         <stop offset={1} stopColor="#60F" stopOpacity={0} />
       </radialGradient>
-      <clipPath id="a">
+      <clipPath id={`${id}-a`}>
         <path fill="#fff" d="M0 0h29v29H0z" />
       </clipPath>
     </defs>

@@ -1,18 +1,20 @@
 import * as React from "react"
-import { SVGProps } from "react"
+import { SVGProps, useId } from "react"
 
-export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) => (
+export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) => {
+  const id = useId()
+  return (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="100%" viewBox="0 0 562 392" {...props}>
-    <g clipPath="url(#a)">
+    <g clipPath={`url(#${id}-a)`}>
       <rect width={562} height={392} fill="#fff" rx={14} />
-      <g filter="url(#b)">
-        <rect width={160} height={333} x={26} y={29} fill="url(#c)" rx={18} />
+      <g filter={`url(#${id}-b)`}>
+        <rect width={160} height={333} x={26} y={29} fill={`url(#${id}-c)`} rx={18} />
         <rect
           width={159}
           height={332}
           x={26.5}
           y={29.5}
-          stroke="url(#d)"
+          stroke={`url(#${id}-d)`}
           rx={17.5}
         />
         <rect width={130} height={10} x={41} y={54} fill="#CDF8DC" rx={5} />
@@ -31,14 +33,14 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <rect width={106} height={7} x={58} y={277} fill="#CDF8DC" rx={3.5} />
         <rect width={106} height={7} x={58} y={297} fill="#CDF8DC" rx={3.5} />
       </g>
-      <g filter="url(#e)">
-        <rect width={108} height={32} x={57} y={169} fill="url(#f)" rx={9} />
+      <g filter={`url(#${id}-e)`}>
+        <rect width={108} height={32} x={57} y={169} fill={`url(#${id}-f)`} rx={9} />
         <rect
           width={107}
           height={31}
           x={57.5}
           y={169.5}
-          stroke="url(#g)"
+          stroke={`url(#${id}-g)`}
           strokeOpacity={0.36}
           rx={8.5}
         />
@@ -59,19 +61,19 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
           d="M71 181.668v3.333l2 2"
         />
       </g>
-      <path stroke="url(#h)" strokeWidth={2} d="M374 191v67" />
-      <g filter="url(#i)">
-        <rect width={322} height={181} x={211} y={29} fill="url(#j)" rx={18} />
+      <path stroke={`url(#${id}-h)`} strokeWidth={2} d="M374 191v67" />
+      <g filter={`url(#${id}-i)`}>
+        <rect width={322} height={181} x={211} y={29} fill={`url(#${id}-j)`} rx={18} />
         <rect
           width={321}
           height={180}
           x={211.5}
           y={29.5}
-          stroke="url(#k)"
+          stroke={`url(#${id}-k)`}
           strokeOpacity={0.47}
           rx={17.5}
         />
-        <g filter="url(#l)">
+        <g filter={`url(#${id}-l)`}>
           <rect width={291} height={70} x={226} y={39} fill="#fff" rx={12} />
         </g>
         <rect width={82} height={10} x={226} y={120} fill="#CDF8DC" rx={5} />
@@ -82,7 +84,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <circle cx={259.5} cy={173.5} r={8.5} fill="#CCF8DC" />
         <circle cx={281.5} cy={173.5} r={8.5} fill="#CCF8DC" />
         <circle cx={303.5} cy={173.5} r={8.5} fill="#CCF8DC" />
-        <g filter="url(#m)">
+        <g filter={`url(#${id}-m)`}>
           <rect width={95} height={32} x={424} y={155} fill="#4FC97A" rx={16} />
           <path
             fill="#fff"
@@ -90,22 +92,22 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
           />
         </g>
         <path
-          fill="url(#n)"
+          fill={`url(#${id}-n)`}
           d="M496.752 191.309a1.442 1.442 0 0 1 .795-1.286 1.432 1.432 0 0 1 1.505.136l11.498 8.627c1.104.828.517 2.588-.863 2.588h-5.674a1.43 1.43 0 0 0-1.14.561l-3.545 4.621c-.835 1.09-2.577.499-2.577-.875l.001-14.372Z"
         />
       </g>
-      <g filter="url(#o)">
-        <g clipPath="url(#p)">
+      <g filter={`url(#${id}-o)`}>
+        <g clipPath={`url(#${id}-p)`}>
           <rect
             width={322}
             height={126}
             x={211}
             y={236}
-            fill="url(#q)"
+            fill={`url(#${id}-q)`}
             rx={18}
           />
-          <g filter="url(#r)">
-            <g clipPath="url(#s)">
+          <g filter={`url(#${id}-r)`}>
+            <g clipPath={`url(#${id}-s)`}>
               <rect
                 width={129}
                 height={37}
@@ -118,10 +120,10 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
                 fill="#918F8F"
                 d="M260.982 266v-9.17h-2.828v-1.26h7v1.26h-2.786V266h-1.386Zm6.516 0-2.59-7.546h1.442l2.058 6.314-.504-.014 2.016-6.3h1.232l2.016 6.3-.504.014 2.072-6.314h1.428l-2.59 7.546h-1.246l-1.988-6.3h.392l-1.988 6.3h-1.246Zm9.83 0v-7.546h1.302V266h-1.302Zm0-8.75v-1.68h1.302v1.68h-1.302Zm6.389 8.834c-.738 0-1.307-.21-1.708-.63-.392-.42-.588-1.013-.588-1.778V259.7h-1.372v-1.246h.28c.336 0 .602-.103.798-.308.196-.205.294-.476.294-.812v-.616h1.302v1.736h1.694v1.246h-1.694v3.934c0 .252.037.471.112.658a.985.985 0 0 0 .406.448c.186.103.434.154.742.154.065 0 .144-.005.238-.014.102-.009.196-.019.28-.028V266a2.487 2.487 0 0 1-.406.056c-.15.019-.276.028-.378.028Zm5.55 0c-.737 0-1.306-.21-1.708-.63-.392-.42-.588-1.013-.588-1.778V259.7h-1.372v-1.246h.28c.336 0 .602-.103.798-.308.196-.205.294-.476.294-.812v-.616h1.302v1.736h1.694v1.246h-1.694v3.934c0 .252.038.471.112.658a.99.99 0 0 0 .406.448c.187.103.434.154.742.154.066 0 .145-.005.238-.014.103-.009.196-.019.28-.028V266a2.456 2.456 0 0 1-.406.056 3.056 3.056 0 0 1-.378.028Zm5.752.084c-.728 0-1.377-.173-1.946-.518a3.7 3.7 0 0 1-1.344-1.414c-.327-.607-.49-1.283-.49-2.03 0-.756.159-1.428.476-2.016a3.687 3.687 0 0 1 1.316-1.386 3.505 3.505 0 0 1 1.876-.518c.56 0 1.055.103 1.484.308a3.13 3.13 0 0 1 1.106.812c.308.336.541.723.7 1.162.168.429.252.877.252 1.344 0 .103-.009.219-.028.35a3.766 3.766 0 0 1-.042.35h-6.188v-1.12h5.432l-.616.504c.084-.485.037-.919-.14-1.302a2.112 2.112 0 0 0-1.96-1.246c-.439 0-.84.112-1.204.336a2.271 2.271 0 0 0-.854.966c-.196.411-.275.901-.238 1.47-.037.551.047 1.036.252 1.456.215.411.513.733.896.966.392.224.817.336 1.274.336.504 0 .929-.117 1.274-.35a2.76 2.76 0 0 0 .84-.896l1.092.56a2.79 2.79 0 0 1-.7.952c-.308.28-.677.504-1.106.672-.42.168-.891.252-1.414.252Zm5.128-.168v-7.546h1.274v1.386l-.14-.196c.177-.429.448-.747.812-.952.364-.215.807-.322 1.33-.322h.462v1.232h-.658c-.532 0-.962.168-1.288.504-.327.327-.49.793-.49 1.4V266h-1.302Zm6.404 1.68 4.704-11.536h1.47l-4.704 11.536h-1.47Zm8.847-1.68 3.402-5.292-3.318-5.138h1.568l2.814 4.382h-.588l2.814-4.382h1.568l-3.318 5.138 3.402 5.292h-1.568l-2.898-4.536h.588L316.952 266h-1.554Z"
               />
-              <g filter="url(#t)">
+              <g filter={`url(#${id}-t)`}>
                 <circle cx={238} cy={261} r={13} fill="#fff" />
               </g>
-              <g clipPath="url(#u)">
+              <g clipPath={`url(#${id}-u)`}>
                 <path
                   fill="#4A5160"
                   fillRule="evenodd"
@@ -139,8 +141,8 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
               rx={18}
             />
           </g>
-          <g filter="url(#v)">
-            <g clipPath="url(#w)">
+          <g filter={`url(#${id}-v)`}>
+            <g clipPath={`url(#${id}-w)`}>
               <rect
                 width={129}
                 height={37}
@@ -153,7 +155,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
                 fill="#918F8F"
                 d="M401.982 266v-9.17h-2.828v-1.26h7v1.26h-2.786V266h-1.386Zm5.34 0v-7.546h1.302V266h-1.302Zm0-8.75v-1.68h1.302v1.68h-1.302Zm3.323 8.75v-10.598h1.302v7.266l-.532-.126 4.004-4.088h1.666l-2.898 3.038 3.094 4.508h-1.54l-2.828-4.088.812-.042-2.198 2.296.42-.952V266h-1.302Zm9.78 0v-9.17h-2.828v-1.26h7v1.26h-2.786V266h-1.386Zm7.94.168a3.907 3.907 0 0 1-1.974-.504 3.844 3.844 0 0 1-1.4-1.414c-.345-.597-.518-1.274-.518-2.03 0-.756.168-1.428.504-2.016a3.874 3.874 0 0 1 1.4-1.4c.588-.345 1.251-.518 1.988-.518.728 0 1.386.173 1.974.518a3.66 3.66 0 0 1 1.386 1.386c.346.588.518 1.265.518 2.03 0 .765-.177 1.447-.532 2.044a3.976 3.976 0 0 1-1.414 1.4 3.774 3.774 0 0 1-1.932.504Zm0-1.26a2.33 2.33 0 0 0 1.26-.35c.383-.233.682-.555.896-.966.224-.411.336-.868.336-1.372 0-.513-.112-.966-.336-1.358a2.436 2.436 0 0 0-.896-.952 2.257 2.257 0 0 0-1.26-.364c-.476 0-.905.121-1.288.364a2.589 2.589 0 0 0-.896.952c-.224.392-.336.845-.336 1.358 0 .504.112.961.336 1.372.224.411.523.733.896.966.383.233.812.35 1.288.35Zm5.577 1.092v-10.598h1.302v7.266l-.532-.126 4.004-4.088h1.666l-2.898 3.038 3.094 4.508h-1.54l-2.828-4.088.812-.042-2.198 2.296.42-.952V266h-1.302Z"
               />
-              <g filter="url(#x)">
+              <g filter={`url(#${id}-x)`}>
                 <circle cx={379} cy={261} r={13} fill="#fff" />
               </g>
               <path
@@ -170,8 +172,8 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
               rx={18}
             />
           </g>
-          <g filter="url(#y)">
-            <g clipPath="url(#z)">
+          <g filter={`url(#${id}-y)`}>
+            <g clipPath={`url(#${id}-z)`}>
               <rect
                 width={129}
                 height={37}
@@ -180,16 +182,16 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
                 fill="#fff"
                 rx={18.5}
               />
-              <g filter="url(#A)">
+              <g filter={`url(#${id}-A)`}>
                 <circle cx={520} cy={261} r={13} fill="#fff" />
               </g>
-              <g clipPath="url(#B)">
+              <g clipPath={`url(#${id}-B)`}>
                 <path
-                  fill="url(#C)"
+                  fill={`url(#${id}-C)`}
                   d="M523.484 253h-7.968a3.516 3.516 0 0 0-3.516 3.516v7.968a3.516 3.516 0 0 0 3.516 3.516h7.968a3.516 3.516 0 0 0 3.516-3.516v-7.968a3.516 3.516 0 0 0-3.516-3.516Z"
                 />
                 <path
-                  fill="url(#D)"
+                  fill={`url(#${id}-D)`}
                   d="M523.484 253h-7.968a3.516 3.516 0 0 0-3.516 3.516v7.968a3.516 3.516 0 0 0 3.516 3.516h7.968a3.516 3.516 0 0 0 3.516-3.516v-7.968a3.516 3.516 0 0 0-3.516-3.516Z"
                 />
                 <path
@@ -207,7 +209,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
               rx={18}
             />
           </g>
-          <path fill="url(#E)" d="M310 237h365v47H310z" />
+          <path fill={`url(#${id}-E)`} d="M310 237h365v47H310z" />
           <rect
             width={136}
             height={11}
@@ -230,12 +232,12 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
           height={125}
           x={211.5}
           y={236.5}
-          stroke="url(#F)"
+          stroke={`url(#${id}-F)`}
           strokeOpacity={0.47}
           rx={17.5}
         />
       </g>
-      <g filter="url(#G)">
+      <g filter={`url(#${id}-G)`}>
         <rect width={126} height={32} x={399} y={319} fill="#4FC97A" rx={16} />
         <path
           fill="#fff"
@@ -243,13 +245,13 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </g>
       <path
-        fill="url(#H)"
+        fill={`url(#${id}-H)`}
         d="M502.752 355.309a1.442 1.442 0 0 1 .795-1.286 1.432 1.432 0 0 1 1.505.136l11.498 8.627c1.104.828.517 2.588-.863 2.588h-5.674a1.43 1.43 0 0 0-1.14.561l-3.545 4.621c-.835 1.09-2.577.499-2.577-.875l.001-14.372Z"
       />
     </g>
     <defs>
       <filter
-        id="b"
+        id={`${id}-b`}
         width={208}
         height={422}
         x={2}
@@ -313,7 +315,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="e"
+        id={`${id}-e`}
         width={138}
         height={88}
         x={42}
@@ -377,7 +379,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="i"
+        id={`${id}-i`}
         width={370}
         height={270}
         x={187}
@@ -441,7 +443,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="l"
+        id={`${id}-l`}
         width={297}
         height={83}
         x={223}
@@ -517,7 +519,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="m"
+        id={`${id}-m`}
         width={95}
         height={40}
         x={424}
@@ -552,7 +554,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="o"
+        id={`${id}-o`}
         width={370}
         height={215}
         x={187}
@@ -616,7 +618,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="r"
+        id={`${id}-r`}
         width={173}
         height={117}
         x={202}
@@ -680,7 +682,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="t"
+        id={`${id}-t`}
         width={50}
         height={69}
         x={213}
@@ -757,7 +759,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="v"
+        id={`${id}-v`}
         width={173}
         height={117}
         x={343}
@@ -821,7 +823,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="x"
+        id={`${id}-x`}
         width={50}
         height={69}
         x={354}
@@ -898,7 +900,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="y"
+        id={`${id}-y`}
         width={173}
         height={117}
         x={484}
@@ -962,7 +964,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="A"
+        id={`${id}-A`}
         width={50}
         height={69}
         x={495}
@@ -1039,7 +1041,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <filter
-        id="G"
+        id={`${id}-G`}
         width={126}
         height={40}
         x={399}
@@ -1074,7 +1076,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         />
       </filter>
       <linearGradient
-        id="c"
+        id={`${id}-c`}
         x1={106}
         x2={106}
         y1={29}
@@ -1085,7 +1087,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="d"
+        id={`${id}-d`}
         x1={106}
         x2={106}
         y1={29}
@@ -1096,7 +1098,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#66CC8A" />
       </linearGradient>
       <linearGradient
-        id="f"
+        id={`${id}-f`}
         x1={111}
         x2={111}
         y1={169}
@@ -1107,7 +1109,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="g"
+        id={`${id}-g`}
         x1={111}
         x2={111}
         y1={169}
@@ -1118,7 +1120,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#66CC8A" />
       </linearGradient>
       <linearGradient
-        id="h"
+        id={`${id}-h`}
         x1={374}
         x2={370.747}
         y1={198.147}
@@ -1132,7 +1134,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#fff" />
       </linearGradient>
       <linearGradient
-        id="j"
+        id={`${id}-j`}
         x1={372}
         x2={372}
         y1={13.5}
@@ -1143,7 +1145,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="k"
+        id={`${id}-k`}
         x1={412}
         x2={410}
         y1={311.5}
@@ -1154,7 +1156,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#66CC8A" stopOpacity={0.67} />
       </linearGradient>
       <linearGradient
-        id="n"
+        id={`${id}-n`}
         x1={503.939}
         x2={503.939}
         y1={189.871}
@@ -1165,7 +1167,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#21AA51" />
       </linearGradient>
       <linearGradient
-        id="q"
+        id={`${id}-q`}
         x1={372}
         x2={372}
         y1={225.21}
@@ -1176,7 +1178,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#EFFFF5" />
       </linearGradient>
       <linearGradient
-        id="E"
+        id={`${id}-E`}
         x1={310}
         x2={675}
         y1={260.5}
@@ -1187,7 +1189,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#fff" />
       </linearGradient>
       <linearGradient
-        id="F"
+        id={`${id}-F`}
         x1={412}
         x2={411.031}
         y1={432.657}
@@ -1198,7 +1200,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#66CC8A" stopOpacity={0.67} />
       </linearGradient>
       <linearGradient
-        id="H"
+        id={`${id}-H`}
         x1={509.939}
         x2={509.939}
         y1={353.871}
@@ -1208,29 +1210,29 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop stopColor="#A3FFC3" />
         <stop offset={1} stopColor="#21AA51" />
       </linearGradient>
-      <clipPath id="a">
+      <clipPath id={`${id}-a`}>
         <rect width={562} height={392} fill="#fff" rx={14} />
       </clipPath>
-      <clipPath id="p">
+      <clipPath id={`${id}-p`}>
         <rect width={322} height={126} x={211} y={236} fill="#fff" rx={18} />
       </clipPath>
-      <clipPath id="s">
+      <clipPath id={`${id}-s`}>
         <rect width={129} height={37} x={218} y={243} fill="#fff" rx={18.5} />
       </clipPath>
-      <clipPath id="u">
+      <clipPath id={`${id}-u`}>
         <path fill="#fff" d="M230 253h15v15h-15z" />
       </clipPath>
-      <clipPath id="w">
+      <clipPath id={`${id}-w`}>
         <rect width={129} height={37} x={359} y={243} fill="#fff" rx={18.5} />
       </clipPath>
-      <clipPath id="z">
+      <clipPath id={`${id}-z`}>
         <rect width={129} height={37} x={500} y={243} fill="#fff" rx={18.5} />
       </clipPath>
-      <clipPath id="B">
+      <clipPath id={`${id}-B`}>
         <path fill="#fff" d="M512 253h15v15h-15z" />
       </clipPath>
       <radialGradient
-        id="C"
+        id={`${id}-C`}
         cx={0}
         cy={0}
         r={1}
@@ -1243,7 +1245,7 @@ export const ContentManagementSectionVisual = (props: SVGProps<SVGSVGElement>) =
         <stop offset={1} stopColor="#C837AB" />
       </radialGradient>
       <radialGradient
-        id="D"
+        id={`${id}-D`}
         cx={0}
         cy={0}
         r={1}

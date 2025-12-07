@@ -39,12 +39,12 @@ function BackgroundCurve({ className }: { className?: string }) {
         {/* Adds a second layer for the gradient feel if needed */}
         <path
           d="M-100 350 C 200 300, 400 180, 720 180 C 1040 180, 1240 300, 1540 350"
-          stroke="url(#gradient-line)"
+          stroke={`url(#${id}-gradient-line)`}
           strokeWidth="1.5"
           className="opacity-40"
         />
         <defs>
-          <linearGradient id="gradient-line" x1="0" y1="0" x2="1" y2="0">
+          <linearGradient id={`${id}-gradient-line`} x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="transparent" />
             <stop offset="50%" stopColor="#70cf91" />
             <stop offset="100%" stopColor="transparent" />

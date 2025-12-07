@@ -53,7 +53,7 @@ export const IconContainerBubble = ({
         
         <defs>
           <linearGradient 
-            id="paint0_linear" 
+            id={`${id}-paint0_linear`} 
             x1={center} 
             y1="0" 
             x2={center} 
@@ -65,7 +65,7 @@ export const IconContainerBubble = ({
           </linearGradient>
           
           <linearGradient 
-            id="paint1_linear" 
+            id={`${id}-paint1_linear`} 
             x1={center} 
             y1={size * 0.105} 
             x2={center} 
